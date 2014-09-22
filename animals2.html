@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+    <link rel="stylesheet" href="animals2.css">
+		<title>Road Race</title>
+	</head>
+	<body>
+		<article id="raceInfo">	
+			<h1>Race to the Arc de Triomphe!</h1>
+			<form id="form" onsubmit="return false;">
+			  	<ul>
+					<li>What is your name?<input type="text" id="userName"/> </li>
+					<li>Are you a turtle or pig?<input type="text" id="userRacer" placeholder="Enter: turtle or pig?" /> </li>
+					<li>Would you like to race against a cat or rabbit?<input type="text" id="compRacer" placeholder="Enter: cat or rabbit." /> <input type="submit" id="addButton" value="Let's Race!" onclick="userInput()"/> </li>
+              	</ul>
+		    </form>
+		    <p></p>
+		</article>
+		<article id="ending"></article>
+      <script src="jquery-1.11.1.min.js"></script>
+      <script src="animals2.js"></script>
+    <div id="background_cycler" >
+    
+      <img id="1" class="active" src="adt1.png" alt="1">
+      <img id="2" src="adt2.png" alt="2">
+      <img id="3" src="adt3.png" alt="3">
+      <img id="4" src="adt4.png" alt="4">
+      <img id="5" src="adt5.png" alt="5">
+      <img id="6" src="adt6.png" alt="6">
+      <img src="adt7.jpg" alt="7">
+
+    </div>
+
+	</body>
+</html>

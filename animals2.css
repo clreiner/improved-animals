@@ -1,0 +1,32 @@
+#background_cycler{padding: 0; margin: 0; width: 100%; position: fixed; top: 0; left: 0; z-index: -1}
+#background_cycler img{ position: fixed; left: 0; top: 0; width: 100%; z-index: 1}
+#background_cycler img.active{z-index: 3}
+
+#raceInfo{
+  background-color: #FFFFFF;
+  font-family: Courier;
+  height: 250px;
+  width: 400px;
+}
+
+h1 {
+	text-align: center;
+}
+
+/*article{
+	float: left;
+}*/
+
+#ending{
+	background-color: green;
+	font-family: Georgia;
+	height: 100px;
+	width: 400px;
+	float: right;
+	position: relative;
+	top: -100px;
+	right: 450px;
+	font-size: 30px;
+	text-align: center;
+	
+}

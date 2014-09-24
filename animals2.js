@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$('#ooopretty').hide();
 	$('#ending').hide();
 })
 
@@ -94,7 +95,9 @@ switch(compRacer) {
 var meters = 18;
 
 
-while (player1.position < meters && player2.position < meters) {
+setInterval(function() {
+	$('#ooopretty').hide();
+if (player1.position < meters && player2.position < meters) {
 	player1.advance();
 	player2.advance();
 	console.log(player1.progressReport() + "|" + player2.progressReport());
@@ -108,17 +111,24 @@ while (player1.position < meters && player2.position < meters) {
     $('p').html("You moved!");
     //alert("you moved!");
   } else {
-  	$('p').html("You moved!");
+  	$('p').html("You are distracted!");
+  	$('#ooopretty').show();
+  	
     //alert("you are distracted!");
   }
-  
-} 
+ }
 
-
+ 
 //output winner
+setTimeout(function() {
+	$('#ooopretty').hide();
 if(player1.position >= meters) {
 	$('#ending').show().html("Well done, " + player1.name + "! You beat " + player2.name + " the " + compRacer + ".");
 } else {
 	$('#ending').show().html("Sorry, " + player1.name + ". " + player2.name + " the " + compRacer + " beat you.");
 }
+}, 15000);
+}, 1500);
 }
+
+

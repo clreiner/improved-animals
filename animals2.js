@@ -120,15 +120,38 @@ if (player1.position < meters && player2.position < meters) {
 
  
 //output winner
-setTimeout(function() {
-	$('#ooopretty').hide();
+
+	
 if(player1.position >= meters) {
+	$('#ooopretty').hide();
 	$('#ending').show().html("Well done, " + player1.name + "! You beat " + player2.name + " the " + compRacer + ".");
-} else {
+	setInterval(function() {
+		$('#ending').html("Rematch?");
+    	$('p').html("Play again?");
+    	$('p').append("<button>Let's do it!</button>");
+    	$('button').on('click', function () {
+    	window.location.reload(true);
+    });
+	}, 1500)
+} else if (player2.position >= meters) {
+	$('#ooopretty').hide();
 	$('#ending').show().html("Sorry, " + player1.name + ". " + player2.name + " the " + compRacer + " beat you.");
-}
-}, 15000);
+	setInterval(function() {
+		$('#ending').html("Rematch?");
+    	$('p').html("Play again?");
+    	$('#ending').append("<button>Let's do it!</button>");
+    	$('button').on('click', function () {
+    	window.location.reload(true);
+    });
+	}, 1500)
+} 
+
+
+
 }, 1500);
+
+
+
 }
 
 
